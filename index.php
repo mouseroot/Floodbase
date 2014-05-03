@@ -16,8 +16,19 @@
 			text-align: center;
 		}
 
+		li > a {
+			color: black;
+		}
+
 		li.active > a {
-			color: red;
+			color: white;
+		}
+		li.active:hover > a {
+			color: black;
+		}
+
+		li.active {
+			background-color: #676;
 		}
 
 	</style>
@@ -44,7 +55,7 @@
 <div class="container">
 
 	<div class="masthead">
-		<h3 class="text-muted">FloodBase - Mirrored Torrents</h3>
+		<h3 class="text-muted"><a href="/temp">FloodBase - Mirrored Torrents</a></h3>
 		<?php
 		//Category switch
 		if(isset($_GET['cat']) && !is_null($_GET['cat']))
@@ -228,7 +239,7 @@
 				}
 				if($counter > 500)
 				{ 
-					die(""); 
+					break;
 				}
 			}
 		?>
